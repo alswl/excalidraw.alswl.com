@@ -11,8 +11,8 @@ Build:
 
 ```
 cd excalidraw
-docker build .
-docker run -it --rm -p 127.0.0.1:8000:80 101ad3eda799 # replace with your image id
+docker build . -t excalidraw-fork
+docker run -it --name alswl-excalidraw --rm -p 127.0.0.1:8000:80 excalidraw-fork
 
 
 # in another terminal
@@ -20,11 +20,15 @@ docker run -it --rm -p 127.0.0.1:8000:80 101ad3eda799 # replace with your image 
 docker ps # get container id
 
 cd excalidraw.alswl.com
-mkdir static
-cd static
-docker cp 56edaa0a8f96:/usr/share/nginx/html/ - > files.tgz # replace your container id
+rm -rf public
+mkdir public
+cd public
+docker cp alswl-excalidraw:/usr/share/nginx/html/ - > files.tgz # replace your container id
 tar xzvf files.tgz
 mv html/* .
 rmdir html
 rm files.tgz
 ```
+
+Hosting in [Cloudflare Pages](https://pages.cloudflare.com/).
+
