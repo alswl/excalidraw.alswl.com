@@ -29,3 +29,6 @@ mv html/* .
 rmdir html
 rm files.tgz
 ```
+
+Hosting in [Cloudflare Pages](https://pages.cloudflare.com/).
+
