@@ -14,14 +14,14 @@ Build:
 git clone git@github.com:alswl/excalidraw.git
 cd excalidraw
 # choose the latest tag from fork or upsteram
-git checkout v0.14.2-fork-b2
+git checkout fork
 docker build . -t excalidraw-fork
 docker run -it --name alswl-excalidraw --rm -p 127.0.0.1:8000:80 excalidraw-fork
 
 
 # in another terminal
 
-docker ps # get container id
+docker ps # check running state
 
 cd excalidraw.alswl.com
 rm -rf public
@@ -35,6 +35,7 @@ rm files.tgz
 cd ..
 
 # check and save your work
+git add .
 ```
 
 Run:
@@ -43,8 +44,10 @@ Local:
 
 ```
 cd public
-python -m http.server
-open 'http://127.0.0.1:8000/'
+python3 -m http.server
+
+# open in another terminal
+# open 'http://127.0.0.1:8000/'
 ```
 
 Prodution: hosting in [Cloudflare Pages](https://pages.cloudflare.com/).
