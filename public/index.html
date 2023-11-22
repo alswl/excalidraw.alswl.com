@@ -1,1 +1,159 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Excalidraw | Hand-drawn look & feel • Collaborative • Secure</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover,shrink-to-fit=no"/><meta name="referrer" content="origin"/><meta name="mobile-web-app-capable" content="yes"/><meta name="theme-color" content="#121212"/><meta name="title" content="Excalidraw — Collaborative whiteboarding made easy"/><meta name="description" content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them."/><meta name="image" content="https://excalidraw.com/og-general-v1.png"/><meta property="og:site_name" content="Excalidraw"/><meta property="og:type" content="website"/><meta property="og:url" content="https://excalidraw.com"/><meta property="og:title" content="Excalidraw — Collaborative whiteboarding made easy"/><meta property="og:image:alt" content="Excalidraw logo"/><meta property="og:description" content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them."/><meta property="og:image" content="https://excalidraw.com/og-fb-v1.png"/><meta property="twitter:card" content="summary_large_image"/><meta property="twitter:site" content="@excalidraw"/><meta property="twitter:url" content="https://excalidraw.com"/><meta property="twitter:title" content="Excalidraw — Collaborative whiteboarding made easy"/><meta property="twitter:description" content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them."/><meta property="twitter:image" content="https://excalidraw.com/og-twitter-v1.png"/><meta name="description" content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them."/><script>try{"dark"===window.localStorage.getItem("excalidraw-theme")&&document.documentElement.classList.add("dark")}catch{}</script><style>html.dark{background-color:#121212;color:#fff}</style><script>"/"!==window.location.pathname||window.location.hash||window.location.search||!document.cookie.includes("excplus-autoredirect=true")||(window.location.href="https://app.excalidraw.com")</script><link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/><meta name="version" content="{version}"/><link rel="preload" href="Virgil.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="preload" href="Cascadia.woff2" as="font" type="font/woff2" crossorigin="anonymous"/><link rel="manifest" href="manifest.json" style="--pwacompat-splash-font:24px Virgil"/><link rel="stylesheet" href="fonts.css"/><script>window.EXCALIDRAW_ASSET_PATH="/",window.name="_excalidraw"</script><style>body,html{margin:0;-webkit-text-size-adjust:100%;width:100%;height:100%;overflow:hidden}.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;user-select:none}#root{height:100%;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media screen and (min-width:1200px){#root{-webkit-touch-callout:default;-webkit-user-select:auto;-khtml-user-select:auto;-moz-user-select:auto;-ms-user-select:auto;user-select:auto}}</style><script defer="defer" src="./static/js/main.f1bb3725.js"></script><link href="./static/css/main.ff3eb8a8.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><header><h1 class="visually-hidden">Excalidraw</h1></header><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Excalidraw | Hand-drawn look &amp; feel • Collaborative • Secure
+  </title>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover, shrink-to-fit=no" name="viewport"/>
+  <meta content="origin" name="referrer"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="#121212" name="theme-color"/>
+  <!-- Primary Meta Tags -->
+  <meta content="Excalidraw — Collaborative whiteboarding made easy" name="title"/>
+  <meta content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them." name="description"/>
+  <meta content="https://excalidraw.com/og-image-2.png" name="image"/>
+  <!-- Open Graph / Facebook -->
+  <meta content="Excalidraw" property="og:site_name"/>
+  <meta content="website" property="og:type"/>
+  <meta content="https://excalidraw.com" property="og:url"/>
+  <meta content="Excalidraw — Collaborative whiteboarding made easy" property="og:title"/>
+  <meta content="Excalidraw logo" property="og:image:alt"/>
+  <meta content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them." property="og:description"/>
+  <meta content="https://excalidraw.com/og-image-2.png" property="og:image"/>
+  <!-- Twitter -->
+  <meta content="summary_large_image" property="twitter:card"/>
+  <meta content="@excalidraw" property="twitter:site"/>
+  <meta content="https://excalidraw.com" property="twitter:url"/>
+  <meta content="Excalidraw — Collaborative whiteboarding made easy" property="twitter:title"/>
+  <meta content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them." property="twitter:description"/>
+  <meta content="https://excalidraw.com/og-twitter-v2.png" property="twitter:image"/>
+  <!-- General tags -->
+  <meta content="Excalidraw is a virtual collaborative whiteboard tool that lets you easily sketch diagrams that have a hand-drawn feel to them." name="description"/>
+  <!------------------------------------------------------------------------->
+  <!--   to minimize white flash on load when user has dark mode enabled   -->
+  <script x-patch-by="alswl/excalidraw">
+   window._env_ = {VITE_APP_BACKEND_V2_GET_URL: 'https://json.excalidraw.com/api/v2/',VITE_APP_LIBRARY_URL: 'https://libraries.excalidraw.com',VITE_APP_FIREBASE_CONFIG: '{"apiKey":"AIzaSyAd15pYlMci_xIp9ko6wkEsDzAAA0Dn0RU","authDomain":"excalidraw-room-persistence.firebaseapp.com","databaseURL":"https://excalidraw-room-persistence.firebaseio.com","projectId":"excalidraw-room-persistence","storageBucket":"excalidraw-room-persistence.appspot.com","messagingSenderId":"654800341332","appId":"1:654800341332:web:4a692de832b55bd57ce0c1"}',VITE_APP_PLUS_APP: 'https://app.excalidraw.com',VITE_APP_DISABLE_TRACKING: '',VITE_APP_WS_SERVER_URL: '',VITE_APP_LIBRARY_BACKEND: 'https://us-central1-excalidraw-room-persistence.cloudfunctions.net/libraries',VITE_APP_PORTAL_URL: 'https://portal.excalidraw.com',VITE_APP_PLUS_LP: 'https://plus.excalidraw.com',VITE_APP_BACKEND_V2_POST_URL: 'https://json.excalidraw.com/api/v2/post/',NODE_ENV: 'production',PUBLIC_URL: '',PKG_NAME: '@excalidraw/excalidraw',PKG_VERSION: '0.15.0',ANALYZER: 'false',EXAMPLE: 'false',}
+  </script>
+  <script>
+   try {
+        //
+        const theme = window.localStorage.getItem("excalidraw-theme");
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      } catch {}
+  </script>
+  <style>
+   html.dark {
+        background-color: #121212;
+        color: #fff;
+      }
+  </style>
+  <!------------------------------------------------------------------------->
+  <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+  <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+  <!-- Excalidraw version -->
+  <meta content="{version}" name="version"/>
+  <link as="font" crossorigin="anonymous" href="/Virgil.woff2" rel="preload" type="font/woff2"/>
+  <link as="font" crossorigin="anonymous" href="/Cascadia.woff2" rel="preload" type="font/woff2"/>
+  <link href="/fonts.css" rel="stylesheet" type="text/css"/>
+  <script>
+   window.EXCALIDRAW_ASSET_PATH = "/";
+      // setting this so that libraries installation reuses this window tab.
+      window.name = "_excalidraw";
+  </script>
+  <!-- FIXME: remove this when we update CRA (fix SW caching) -->
+  <style>
+   body,
+      html {
+        margin: 0;
+        -webkit-text-size-adjust: 100%;
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      .visually-hidden {
+        position: absolute !important;
+        height: 1px;
+        width: 1px;
+        overflow: hidden;
+        clip: rect(1px, 1px, 1px, 1px);
+        white-space: nowrap;
+        user-select: none;
+      }
+
+      #root {
+        height: 100%;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media screen and (min-width: 1200px) {
+        #root {
+          -webkit-touch-callout: default;
+          -webkit-user-select: auto;
+          -khtml-user-select: auto;
+          -moz-user-select: auto;
+          -ms-user-select: auto;
+          user-select: auto;
+        }
+      }
+  </style>
+  <script crossorigin="" src="/assets/index-ceabcf52.js" type="module">
+  </script>
+  <link href="/assets/index-19911eb3.css" rel="stylesheet"/>
+  <link href="/manifest.webmanifest" rel="manifest"/>
+ </head>
+ <body>
+  <noscript>
+   You need to enable JavaScript to run this app.
+  </noscript>
+  <header>
+   <h1 class="visually-hidden">
+    Excalidraw
+   </h1>
+  </header>
+  <div id="root">
+  </div>
+  <!-- 100% privacy friendly analytics -->
+  <script>
+   // need to load this script dynamically bcs. of iframe embed tracking
+      var scriptEle = document.createElement("script");
+      scriptEle.setAttribute(
+        "src",
+        "https://scripts.simpleanalyticscdn.com/latest.js",
+      );
+      scriptEle.setAttribute("type", "text/javascript");
+      scriptEle.setAttribute("defer", true);
+      scriptEle.setAttribute("async", true);
+      // if iframe
+      if (window.self !== window.top) {
+        scriptEle.setAttribute("data-auto-collect", true);
+      }
+
+      document.body.appendChild(scriptEle);
+
+      // if iframe
+      if (window.self !== window.top) {
+        scriptEle.addEventListener("load", () => {
+          if (window.sa_pageview) {
+            window.window.sa_event(action, {
+              category: "iframe",
+              label: "embed",
+              value: window.location.pathname,
+            });
+          }
+        });
+      }
+  </script>
+  <!-- end LEGACY GOOGLE ANALYTICS -->
+ </body>
+</html>
