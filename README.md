@@ -12,13 +12,13 @@ If you want own your self-host excalidraw, please check my another project: [als
 Docs related:
 
 - [Self hosted online collaborative drawing platform Excalidraw | Log4D](https://en.blog.alswl.com/2022/10/self-hosted-excalidraw/)
-- [私有化在线协同画图平台 Excalidraw | Log4D]( https://blog.alswl.com/2022/10/self-hosted-excalidraw/ )
+- [私有化在线协同画图平台 Excalidraw | Log4D](https://blog.alswl.com/2022/10/self-hosted-excalidraw/)
 
 Build:
 
 ```
 # using my forked excalidraw
-docker run -it --rm --name excalidraw docker.io/alswl/excalidraw:v0.16.1-fork-b1
+docker run -it --rm --name excalidraw docker.io/alswl/excalidraw:v0.17.0-fork-b1
 
 # open another terminal
 docker ps # check running state
@@ -45,8 +45,7 @@ cd public
 python3 -m http.server
 
 # open in another terminal
-# open 'http://127.0.0.1:8000/'
+open 'http://127.0.0.1:8000/'
 ```
 
-Prodution: hosting in [Cloudflare Pages](https://pages.cloudflare.com/).
-
+Production: hosting in [Cloudflare Pages](https://pages.cloudflare.com/).
