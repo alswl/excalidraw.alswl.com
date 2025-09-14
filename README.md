@@ -4,10 +4,11 @@ Online(no collaboration): https://excalidraw.alswl.com
 
 Feature:
 
-- Chinese font with handwriting style
 - Pure static
+- Chinese font with handwriting style (using official CJK font solution since v0.18.0)
 
-If you want own your self-host excalidraw, please check my another project: [alswl/excalidraw-collaboration](https://github.com/alswl/excalidraw-collaboration).
+If you want own your self-host excalidraw (with collaboration),
+please check my another project: [alswl/excalidraw-collaboration](https://github.com/alswl/excalidraw-collaboration).
 
 Docs related:
 
@@ -18,7 +19,7 @@ Build:
 
 ```
 # using my forked excalidraw
-docker run -it --rm --name excalidraw docker.io/alswl/excalidraw:v0.17.0-fork-b1
+docker run -it --rm --name excalidraw docker.io/alswl/excalidraw:latest
 
 # open another terminal
 docker ps # check running state
